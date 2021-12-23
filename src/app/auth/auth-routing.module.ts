@@ -1,6 +1,6 @@
 import { RegistroComponent } from './pages/registro/registro.component';
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { RouterModule, RouterState, Routes } from '@angular/router';
 import { LoginComponent } from './pages/login/login.component';
 import { MainComponent } from './pages/main/main.component';
 
@@ -10,7 +10,7 @@ const routes: Routes = [
     children:[
       { path: 'login', component: LoginComponent },
       { path: 'registro', component: RegistroComponent },
-      { path: '**', redirectTo: 'login' }
+      { path: '**', redirectTo: 'login', pathMatch: 'full' }
     ]
   }
 ];
