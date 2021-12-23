@@ -6,6 +6,7 @@ export interface Usuario {
 }
 
 export interface AuthResponse {
+  email?: string | undefined;
   ok: boolean;
   uid?: string;
   name?: string;
